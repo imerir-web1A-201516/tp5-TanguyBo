@@ -9,7 +9,7 @@ app.debug = True
 
 def db_init():
     """Cette fonction crée la connexion à la base de données et renvoie,
-       l'objet de connexion et un curseur."""
+       l' objet de connexion et un curseur."""
     
     urlparse.uses_netloc.append("postgres")
     url = urlparse.urlparse(os.environ["DATABASE_URL"])
