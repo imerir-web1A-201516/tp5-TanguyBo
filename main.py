@@ -38,18 +38,18 @@ def db_createTables(conn, cur):
     INSERT INTO Product (name, price) VALUES ('Pomme', 1.20);
     INSERT INTO Product (name, price) VALUES ('Poire', 1.60);
     INSERT INTO Product (name, price) VALUES ('Fraise', 3.80);
-    DROP TABLE Basket;
+    DROP TABLE IF EXISTS Basket;
     CREATE TABLE Basket (
       bid SERIAL,
       basket_uid INT
     );
-    DROP TABLE BasketContent;
+    DROP TABLE IF EXISTS BasketContent;
     CREATE TABLE BasketContent (
       basket_ref INT,
       product_ref INT,
       product_qt INT
     );
-    DROP TABLE UserAccount;
+    DROP TABLE IF EXISTS UserAccount;
     CREATE TABLE UserAccount (
       uid SERIAL,
       email varchar,
